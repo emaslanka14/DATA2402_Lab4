@@ -1,0 +1,12 @@
+Cases Discussed in Tutorial
+
+Load 10 teams
+Verify Drivers and Points
+
+Test 2 Special
+Create Team with 3 Drivers 
+Verify Total and Sorting
+
+Test 3 Error 
+Use Invalid Points value
+Verify Value Error
