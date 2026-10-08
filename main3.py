@@ -4,7 +4,7 @@ from classes1 import Driver, Team
 def main():
     filename = "f1_points.csv"
 
-    teamsDict = {}
+    teams = {}
 
     with open(filename, "r") as f:
 
@@ -20,17 +20,17 @@ def main():
                 points = int(data[2])
 
                 DriverObj = Driver(driver, points)
-                if teamName not in teamsDict:
-                    teamsDict[teamName] = Team(teamName)
-                    teamsDict[teamName].add_driver(DriverObj)
+                if teamName not in teams:
+                    teams[teamName] = Team(teamName)
+                    teams[teamName].add_driver(DriverObj)
                 else:
-                    teamsDict[teamName].add_driver(DriverObj)
+                    teams[teamName].add_driver(DriverObj)
 
             except Exception as e:
                 print(f"Error: {e} in line: {line.strip()}")
                 continue
 
-    listOfTeams = list(teamsDict.values())
+    listOfTeams = list(teams.values())
     sortedTeams = sorted(listOfTeams, reverse=True) #convert dict to list
 
     print("Teams and their drivers sorted by total points:")
