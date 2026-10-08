@@ -46,7 +46,7 @@ class Team:
         It should return a string that describes this Team, for example:
         "FERRARI with drivers Carlos Sainz, Charles Leclerc. Total pts: 406"
         """
-        driver_str = ",".join(str(driver) for driver in self.drivers)
+        driver_str = ", ".join(str(driver) for driver in self.drivers)
         return f"{self.name}\n {driver_str}. Total pts: {self.get_total_points()}"
 
     def __lt__(self, other: 'Team') -> bool:
